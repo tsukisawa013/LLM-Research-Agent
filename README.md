@@ -49,9 +49,6 @@ ChromaDB is used as the vector store with a PersistentClient, storing its data i
 To run the project, execute the main script from your terminal:
 `python agent.py`
 # Limitations and Future work
-### JSON Issue
-The agent communicate with ComparePapersTool via JSON text string. However, paper abstracts sometimes contain several LaTeX symbols for mathematical or scientific notation, which can lead to invalid escape sequences or formatting issues within the JSON string. The agent can realize and fix it with less amount of \escpae over serveral try. But it is also posible that agent will give up and do the comparison by itself after serveral try.
-Thus, finding a more robust format or method for transmitting paper information between the agent and its tools is a necessary area for future improvement.
 ### Prompt Robustness
 As we mentioned at System Architecture section, we've perform extensive prompt engineering on our prompt template to guide the agent work as closely to our expectations as possible (such as using tools corectly, don't forget the `Final Ansewr:` tag). Our project was initially developed on `gemini-2.0-flash`, which is not very smart but obeyed the prompt. In the final stages of development we switched to `gemini-2.5-flash-preview-04-17`, hoping for better performance in prompt understanding. The 2.5-flash did indeed show better performance on prompt understanding but also more creative.
 For example, with the \escape issue we mention earlier, 2.0-flash would get stuck in a loop, trying the tools repeatedly. While 2.5-flash can gave up and complete the work by itself in serveral try.
