@@ -1,8 +1,3 @@
----
-title: LLM Agent Project Report
-
----
-
 # Project overview
 Our project has successfully completed an LLM Agent that can interact with users through the natural language.
 We completed this project based on LangChain and Google Gemini. We designed 4 tools as required: PDFUploadTool, arXivSearchTool, InternalSearchTool, and ComparePapersTool.
