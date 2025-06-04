@@ -1,0 +1,10 @@
+langchain
+langchain_openai
+langchain_community
+langchain-google-genai
+google-generativeai
+numexpr
+wikipedia
+PyMuPDF
+mysql-connector-python
+chromadb
